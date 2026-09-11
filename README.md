@@ -16,11 +16,11 @@ formulär med validering m.m.).
 
 ## Publicerad sida
 
-🔗 [Fyll i er GitHub Pages-länk här när den är live]
+[🔗 (https://sxnonum.github.io/chashack-starter/)]
 
 ## LinkedIn-inlägg
 
-🔗 [Klistra in länken till ert LinkedIn-inlägg här]
+🔗 [(https://lnkd.in/p/gDbZd4Dd)]
 
 ## Bra att veta för granskarna
 
