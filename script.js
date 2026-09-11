@@ -217,7 +217,8 @@ setInterval(updateCountdown, 1000);
 const carouselImages = [
   { src: 'carousel-1.svg', alt: 'Illustration: laget började koda sidan' },
   { src: 'carousel-2.svg', alt: 'Illustration: laget fixade buggar tillsammans' },
-  { src: 'carousel-3.svg', alt: 'Illustration: laget levererade den färdiga sidan' }
+  { src: 'carousel-3.svg', alt: 'Illustration: laget levererade den färdiga sidan' },
+  { src: 'logo.png', alt: "B&B:s logotyp: handritad text 'ChasGPT' i svart, med en orange stjärnformad sol bakom" }
 ];
 let carouselIndex = 0;
 const carouselImageEl = document.getElementById('carousel-image');
