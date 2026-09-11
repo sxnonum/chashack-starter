@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B&amp;B</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <div class="topbar">
+      <img class="logo" src="logo.png" alt="B&amp;B:s logotyp: handritad text 'ChasGPT' i svart, med en orange stjärnformad sol bakom">
+      <button id="theme-toggle-btn" aria-pressed="false">🌙 Mörkt läge</button>
+    </div>
+
+    <header>
+      <h1>B&amp;B</h1>
+      <p class="typewriter" id="typewriter-text" aria-live="polite"></p>
+      <p class="pitch">
+        Vi är Alexander och Abdulqadir. Det här är vad vi hann bygga
+        under dagens hackathon på Chas Academy.
+      </p>
+    </header>
+
+    <section class="team">
+      <h2>Laget</h2>
+      <label class="search-label" for="member-search">Sök medlem</label>
+      <input type="text" id="member-search" placeholder="Skriv ett namn...">
+      <div id="members-container" class="members-grid"></div>
+    </section>
+
+    <section class="team-photo-section">
+      <h2>Lagbild</h2>
+      <img id="team-photo" src="team-photo-placeholder.svg" alt="Platshållare för lagbild — byt ut mot ett riktigt foto på Alexander och Abdulqadir">
+      <p class="hint">Byt <code>team-photo-placeholder.svg</code> mot en riktig bild av laget och uppdatera <code>src</code> ovan.</p>
+    </section>
+
+    <section class="gallery">
+      <h2>Från dagen</h2>
+      <div class="gallery-grid">
+        <img src="carousel-1.svg" alt="Illustration: laget började koda sidan">
+        <img src="carousel-2.svg" alt="Illustration: laget fixade buggar tillsammans">
+        <img src="carousel-3.svg" alt="Illustration: laget levererade den färdiga sidan">
+        <img src="logo.png" alt="B&amp;B:s logotyp igen, som en fjärde bild i galleriet">
+      </div>
+    </section>
+
+    <section class="carousel-section">
+      <h2>Bläddra genom dagen</h2>
+      <div class="carousel">
+        <button id="carousel-prev" aria-label="Föregående bild">←</button>
+        <img id="carousel-image" src="carousel-1.svg" alt="Illustration: laget började koda sidan">
+        <button id="carousel-next" aria-label="Nästa bild">→</button>
+      </div>
+    </section>
+
+    <section class="action-grid">
+
+      <div class="card">
+        <button id="greet-btn">Säg hej till laget</button>
+        <p id="greet-text" aria-live="polite"></p>
+      </div>
+
+      <div class="card">
+        <button id="quote-btn">Slumpa ett lagcitat</button>
+        <p id="quote-text" aria-live="polite"></p>
+      </div>
+
+      <div class="card">
+        <button id="counter-btn">Klicka mig: <span id="counter-display">0</span></button>
+      </div>
+
+      <div class="card">
+        <button id="confetti-btn">🎉 Konfetti</button>
+      </div>
+
+      <div class="card">
+        <button id="sound-btn">🔊 Spela ljud</button>
+      </div>
+
+      <div class="card">
+        <button id="fact-btn">Hämta ett livstips</button>
+        <p id="fact-text" aria-live="polite"></p>
+      </div>
+
+    </section>
+
+    <section class="countdown-section">
+      <h2>Nedräkning till redovisningen</h2>
+      <!-- Ändra target-datumet i script.js till er faktiska redovisningstid -->
+      <p id="countdown" class="countdown" aria-live="polite">Laddar...</p>
+    </section>
+
+    <section class="contact">
+      <h2>Kontakta laget</h2>
+      <form id="contact-form" novalidate>
+        <div class="field">
+          <label for="cf-name">Namn</label>
+          <input type="text" id="cf-name" name="name">
+          <span class="error" id="cf-name-error"></span>
+        </div>
+        <div class="field">
+          <label for="cf-email">E-post</label>
+          <input type="email" id="cf-email" name="email">
+          <span class="error" id="cf-email-error"></span>
+        </div>
+        <div class="field">
+          <label for="cf-message">Meddelande</label>
+          <textarea id="cf-message" name="message" rows="3"></textarea>
+          <span class="error" id="cf-message-error"></span>
+        </div>
+        <button type="submit">Skicka</button>
+        <p id="form-feedback" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="timeline">
+      <h2>Loggbok över dagen</h2>
+      <ul id="timeline-list" class="timeline-list">
+        <li><span class="time">09:00</span> Satte upp repo, forkade och bjöd in varandra som collaborators.</li>
+        <li><span class="time">09:45</span> Byggde grundskelettet i index.html och kopplade in style.css.</li>
+        <li><span class="time">11:00</span> Lade in logga, knapp och footer. Fastnade en stund på att script.js inte kopplades in.</li>
+        <li><span class="time">13:30</span> Fick GitHub Pages live efter strul med git-installationen på Windows.</li>
+        <li><span class="time">15:00</span> Byggde på med tema-växling, medlemskort och citat-knapp.</li>
+      </ul>
+    </section>
+
+    <section class="tools">
+      <h2>Allas favoritverktyg</h2>
+      <ul id="tools-list" class="tools-list">
+        <li><strong>Alexander:</strong> VS Code + Live Server — slipper ladda om manuellt hela tiden.</li>
+        <li><strong>Abdulqadir:</strong> Committa ofta och tidigt, hellre för många commits än för få.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>B&amp;B &middot; 2026</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
