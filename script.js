@@ -4,7 +4,6 @@ const members = [
   { name: 'Abdulqadir Nur', role: 'Fullstack & struktur', tool: 'Committa ofta och tidigt' }
 ];
 
-<<<<<<< HEAD
 function initials(name) {
   return name.split(' ').map(part => part[0]).join('').toUpperCase();
 }
@@ -86,17 +85,11 @@ typeNextChar();
 /* ---------- Hälsningsknapp ---------- */
 const greetButton = document.getElementById('greet-btn');
 const greetText = document.getElementById('greet-text');
-=======
-const greetButton = document.getElementById('greet-btn');
-const greetText = document.getElementById('greet-text');
-
->>>>>>> 3c2afac279f9cef87bbec63c0e38c5896ebcd167
 const greetings = [
   'Hej från Alexander och Abdulqadir! 👋',
   'B&B kör hackathon idag 🚀',
   'Tack för besöket på vår sida!'
 ];
-<<<<<<< HEAD
 let greetCount = 0;
 greetButton.addEventListener('click', () => {
   greetText.textContent = greetings[greetCount % greetings.length];
@@ -325,12 +318,3 @@ document.addEventListener('keydown', (e) => {
     quoteText.textContent = '🥚 Ni hittade ägget! B&B tackar för besöket.';
   }
 });
-=======
-
-let count = 0;
-
-greetButton.addEventListener('click', () => {
-  greetText.textContent = greetings[count % greetings.length];
-  count++;
-});
->>>>>>> 3c2afac279f9cef87bbec63c0e38c5896ebcd167
